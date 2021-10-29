@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class AngleBetweenPoints {
+	
+	
+	public static void main(String args[]) {
+		
+		Scanner in = new Scanner(System.in);
+		System.out.print( "enter Ax: ");
+		int PointAx = in.nextInt(); 
+		System.out.print( "enter Ay: ");
+		int PointAy = in.nextInt(); 
+		System.out.print( "enter Bx: ");
+		int PointBx = in.nextInt(); 
+		System.out.print( "enter By: ");
+		int PointBy = in.nextInt(); 
+		System.out.print( "enter Cx: ");
+		int PointCx = in.nextInt(); 
+		System.out.print( "enter Cy: ");
+		int PointCy = in.nextInt(); 
+			
+		double AB2 = Math.pow(PointAx - PointBx,2)+Math.pow(PointAy - PointBy,2);
+		double BC2 = Math.pow(PointBx - PointCx,2)+Math.pow(PointBy - PointCy,2);
+		double AC2 = Math.pow(PointAx - PointCx,2)+Math.pow(PointAy - PointCy,2);
+		double FirstCos = AB2 + BC2 - AC2 ;
+		double SecondCos = 2*(Math.sqrt(AB2)*Math.sqrt(BC2));
+		double result = FirstCos / SecondCos;
+		double cos = Math.acos(result);
+		double angle = Math.toDegrees(cos);
+		System.out.println(angle);
+	
+ }
+}
