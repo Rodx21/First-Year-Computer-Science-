@@ -1,0 +1,23 @@
+import java.util.*;
+
+public class Tax {
+	
+public static void main(String args[]) {
+		
+		Scanner in = new Scanner(System.in);
+		System.out.print(" are you 1- single, 2- single with child or 3 - married: "); 
+		double status = in.nextDouble(); // single, single with child and married
+		System.out.print(" how much is yours payslip: ");
+		double payslip = in.nextDouble(); // In Euros
+		double taxquarenta = payslip/100*40;
+		double taxvinte =  payslip/100*20;
+		
+		if (status==1 && payslip<35300) {System.out.println("€ " + taxvinte/12);}
+		else if (status==1 && payslip>=35300) {System.out.println("€ " + taxquarenta/12);}
+		else if (status==2 && payslip<39300) {System.out.println("€ " + taxvinte/12);}
+		else if (status==2 && payslip>=39300) {System.out.println("€ " + taxquarenta/12);}
+		else if (status==3 && payslip<44300) {System.out.println("€ " + taxvinte/12);}
+		else if (status==3 && payslip>=44300) {System.out.println("€ " + taxquarenta/12);}
+	
+	}
+}
