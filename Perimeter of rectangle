@@ -1,0 +1,9 @@
+public class PerimetroRetangulo {
+	public static void main(String args[]) {
+		double Length = (200);
+		double Width = (212);
+		double Perimeter = 2*(Length+Width);
+		System.out.println(Perimeter);
+	}
+
+}
