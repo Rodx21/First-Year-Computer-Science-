@@ -1,0 +1,12 @@
+
+public class NumbersOfDays {
+
+	public static void main(String args[]) {
+		double RegularDays = 365*100;
+		double LeapDays = 25;
+		double TotalDays = RegularDays + LeapDays;
+		System.out.println(TotalDays + " Days");
+	
+	}
+}
+
