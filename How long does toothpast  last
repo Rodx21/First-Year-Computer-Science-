@@ -1,0 +1,31 @@
+
+package toothpast;
+import java.util.Scanner;
+
+public class Toothpast {
+
+
+    public static void main(String[] args) {
+      Scanner in = new Scanner(System.in);
+		
+		double peaDiameter = 0.8; //cm
+		
+		System.out.println("Enter the volume of toothpaste in ml: ");
+		double toothpasteVolume = in.nextDouble();
+		
+		System.out.println("Enter the number of times you brush per day: ");
+		double usesPerDay = in.nextDouble();
+		
+		double peaRadius = peaDiameter/2;
+		
+		double peaVolume = 4.0/3.0*Math.PI*Math.pow(peaRadius,3);
+		
+		double uses = toothpasteVolume/peaVolume;
+		
+		double days = uses/usesPerDay;
+		
+		System.out.println("toothpaste tube will last " + days + " days");
+
+    }
+    
+}
