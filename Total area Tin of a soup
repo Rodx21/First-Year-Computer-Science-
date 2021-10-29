@@ -1,0 +1,17 @@
+ public class TinOfASoup {
+	public static void main(String args[]) {
+		double Diameter = 7; // cm
+		double Height = 10.5; //cm
+		double Radius = Diameter/2; // cm 
+		double Volume = Math.PI* Math.pow(Radius, 2)*Height; //cm3
+		double RetangularWrapper = 2*Math.PI*Radius*Height; // cm
+		double CircleArea = 2*(Math.PI*Math.pow(Radius, 2)); // cm
+		double TotalArea = CircleArea + RetangularWrapper; // cm
+		System.out.println(Volume + " cm3");
+		System.out.println(RetangularWrapper + " cm");
+		System.out.println(TotalArea + " cm");
+		
+	
+
+ }
+}
