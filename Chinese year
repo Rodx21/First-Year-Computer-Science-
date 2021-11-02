@@ -1,0 +1,55 @@
+import java.util.*;
+
+public class YearOfTheRat {
+	
+
+	public static void main(String args[] ) {
+
+		Scanner in = new Scanner(System.in);
+		System.out.print(" enter year: ");
+		int year = in.nextInt();
+		
+		int animalyear = year % 12;
+		
+		switch (animalyear) {
+		case 0: animalyear = 0;
+			System.out.print("Year of the monkey");
+			break;
+		case 1: animalyear = 1;
+			System.out.print("Year of the rooster");
+			break;
+		case 2: animalyear = 2;
+			System.out.print("Year of the dog");
+			break;
+		case 3: animalyear = 3;
+			System.out.print("Year of the pig");
+			break;
+		case 4: animalyear = 4;
+			System.out.print("Year of the rat");
+			break;
+		case 5: animalyear = 5;
+			System.out.print("Year of the ox");
+			break;
+		case 6: animalyear = 6;
+			System.out.print("Year of the tiger");
+			break;
+		case 7: animalyear = 7;
+			System.out.print("Year of the rabbit");
+		case 8: animalyear = 8;
+			System.out.print("Year of the dragon");
+			break;
+		case 9: animalyear = 9;
+			System.out.print("Year of the snake");
+			break;
+		case 10: animalyear = 10;
+			System.out.print("Year of the horse");
+			break;
+		case 11: animalyear = 11;
+			System.out.print("Year of the sheep");
+			break;
+		default:
+			System.out.print("Input a valid number");
+		}
+		
+	}
+}
