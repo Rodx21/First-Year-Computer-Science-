@@ -1,0 +1,35 @@
+import java.util.*;
+
+public class VowelOrConsonant {
+	
+
+	public static void main(String args[] ) {
+
+		Scanner in = new Scanner(System.in);
+		System.out.print(" enter letter: ");
+		char inputChar = in.nextLine().charAt(0);
+		
+		int charCorde =(int)inputChar;
+		if (!((inputChar>=65&&inputChar<=90)||(inputChar>=97&&inputChar<=122))){
+		 System.out.println("Please enter a valid char");
+		 }
+		else {
+			
+		if (inputChar=='a') System.out.println ("vowel");
+		else if (inputChar=='A')System.out.println ("vowel");
+		else if (inputChar=='e')System.out.println ("vowel");
+		else if (inputChar=='E')System.out.println ("vowel");
+		else if (inputChar=='i')System.out.println ("vowel");	
+		else if (inputChar=='I')System.out.println ("vowel");
+		else if (inputChar=='o')System.out.println ("vowel");
+		else if (inputChar=='O')System.out.println ("vowel");
+		else if (inputChar=='u')System.out.println ("vowel");
+		else if (inputChar=='U')System.out.println ("vowel");
+		
+		else System.out.println("consonant");
+		}
+		
+		
+		}
+	}
+		
