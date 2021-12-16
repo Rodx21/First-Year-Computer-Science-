@@ -1,0 +1,312 @@
+import java.util.*;
+import java.util.stream.IntStream;
+
+public class Assignment1 {
+
+	public static void main(String args[]) {
+		// task 1
+
+		int[] number = new int[10]; // array for winning numbers
+
+		int i = 0;
+		while (i < 10) {
+			number[i] = 1 + (int) (Math.random() * 99);
+			boolean colide = false;
+
+			for (int j = 0; j < i; j++) {
+				if (number[i] == number[j]) {
+					colide = true;
+					break;
+				}
+			}
+			if (!colide) {
+				i++;
+			}
+		}
+
+		for (int nbr : number) {
+			System.out.println(nbr < 10 ? "0" + nbr : nbr);
+		}
+
+		int sum = IntStream.of(number).sum(); // sum of winning numbers
+		System.out.println("The sum is " + sum);
+
+		// task 2
+
+		int rndnumber1 = 1 + (int) (Math.random() * 100); // sum 1
+
+		if (rndnumber1 > 0 && rndnumber1 < 51) {
+			System.out.println("€ 10");
+		}
+		if (rndnumber1 == 51 || (rndnumber1 > 51 && rndnumber1 < 78)) {
+			System.out.println("€ 20");
+		}
+		if (rndnumber1 == 78 || (rndnumber1 > 78 && rndnumber1 < 93)) {
+			System.out.println("€ 50");
+		}
+		if (rndnumber1 == 93 || (rndnumber1 > 93 && rndnumber1 < 99)) {
+			System.out.println("€ 200");
+		}
+
+		if (rndnumber1 == 99 || (rndnumber1 > 99 && rndnumber1 < 101)) {
+			System.out.println("€ 1000");
+		}
+
+		int rndnumber2 = 1 + (int) (Math.random() * 100); // sum 2
+
+		if (rndnumber2 > 0 && rndnumber2 < 51) {
+			System.out.println("€ 10");
+		}
+		if (rndnumber2 == 51 || (rndnumber2 > 51 && rndnumber2 < 78)) {
+			System.out.println("€ 20");
+		}
+		if (rndnumber2 == 78 || (rndnumber2 > 78 && rndnumber2 < 93)) {
+			System.out.println("€ 50");
+		}
+		if (rndnumber2 == 93 || (rndnumber2 > 93 && rndnumber2 < 99)) {
+			System.out.println("€ 200");
+		}
+
+		if (rndnumber2 == 99 || (rndnumber2 > 99 && rndnumber2 < 101)) {
+			System.out.println("€ 1000");
+		}
+
+		int rndnumber3 = 1 + (int) (Math.random() * 100); // sum 3
+
+		if (rndnumber3 > 0 && rndnumber3 < 51) {
+			System.out.println("€ 10");
+		}
+		if (rndnumber3 == 51 || (rndnumber3 > 51 && rndnumber3 < 78)) {
+			System.out.println("€ 20");
+		}
+		if (rndnumber3 == 78 || (rndnumber3 > 78 && rndnumber3 < 93)) {
+			System.out.println("€ 50");
+		}
+		if (rndnumber3 == 93 || (rndnumber3 > 93 && rndnumber3 < 99)) {
+			System.out.println("€ 200");
+		}
+
+		if (rndnumber3 == 99 || (rndnumber3 > 99 && rndnumber3 < 101)) {
+			System.out.println("€ 1000");
+		}
+
+		int rndnumber4 = 1 + (int) (Math.random() * 100); // sum 4
+
+		if (rndnumber4 > 0 && rndnumber4 < 51) {
+			System.out.println("€ 10");
+		}
+		if (rndnumber4 == 51 || (rndnumber4 > 51 && rndnumber4 < 78)) {
+			System.out.println("€ 20");
+		}
+		if (rndnumber4 == 78 || (rndnumber4 > 77 && rndnumber4 < 93)) {
+			System.out.println("€ 50");
+		}
+		if (rndnumber4 == 93 || (rndnumber4 > 93 && rndnumber4 < 99)) {
+			System.out.println("€ 200");
+		}
+
+		if (rndnumber4 == 99 || (rndnumber4 > 99 && rndnumber4 < 101)) {
+			System.out.println("€ 1000");
+		}
+
+		// task 3
+
+		Scanner in = new Scanner(System.in); // asked number 1
+		System.out.print(" enter first number: ");
+		int first = in.nextInt();
+		if (first < 0 || first > 99) {
+			System.out.println("Insert a valid number in first number");
+			first = in.nextInt();
+			}
+
+		System.out.print(" enter second number: "); // asked number 2
+		int second = in.nextInt();
+		if (first == second) {
+			System.out.println("Please enter a diferent number");
+			second = in.nextInt();
+		}
+		if (second < 0 || second > 99) {
+			System.out.println("Insert a valid number in second number");
+			second = in.nextInt();
+		}
+		System.out.print(" enter third number: "); // asked number 3
+		int third = in.nextInt();
+		if (third == second || third == first) {
+			System.out.println("Please enter a diferent number");
+			third = in.nextInt();
+		}
+		if (third < 0 || third > 99) {
+			System.out.println("Insert a valid number in third number");
+			third = in.nextInt();
+		}
+		System.out.print(" enter fourth number: "); // asked number 4
+		int fourth = in.nextInt();
+		if (fourth == second || fourth == first || fourth == third) {
+			System.out.println("Please enter a diferent number");
+			fourth = in.nextInt();
+		}
+		if (fourth < 0 || fourth > 99) {
+			System.out.println("Insert a valid number in fourth number");
+			fourth = in.nextInt();
+		}
+		System.out.print(" enter fifth number: "); // asked number 5
+		int fifth = in.nextInt();
+		if (fifth == second || fifth == first || fifth == third || fifth == fourth) {
+			System.out.println("Please enter a diferent number");
+			fifth = in.nextInt();
+		}
+		if (fifth < 0 || fifth > 99) {
+			System.out.println("Insert a valid number in fifth number");
+			fifth = in.nextInt();
+		}
+		
+		//task 4 
+		
+		
+		boolean found = false;
+
+		boolean found2 = false;
+
+		boolean found3 = false;
+
+		boolean found4 = false;
+
+		boolean found5 = false;
+
+		boolean found6 = false;
+		
+		boolean found7 = false;
+
+		boolean found8 = false;
+		
+		boolean found9 = false;
+		
+		boolean found10 = false;
+		
+		boolean found11 = false;
+		
+		boolean found12 = false;
+		
+		boolean found13 = false;
+		
+		boolean found14 = false;
+		
+		boolean found15 = false;
+
+		String result = "";
+		for (int c = 0; c < number.length; c++) {
+			int x = number[c];
+			
+
+			// VALIDATION OF €1.000,00 xxxxxxxxxxxxxxxxxxxxxxxxxxxx
+			
+			if (x == first) {
+				found = true;
+				result = "YOU WON €1000,00";
+			}
+			if (x == second) {
+				found2 = true;
+				result = "YOU WON €1000,00";
+			}
+			if (x == third) {
+				found3 = true;
+				result = "YOU WON €1000,00";
+			}
+			if (x == fourth) {
+				found4 = true;
+				result = "YOU WON €1000,00";
+			}
+			if (x == fifth) {
+				found5 = true;
+				result = "YOU WON €1000,00";
+			}
+			// VALIDATION OF €6.000,00 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+			if (x == second && found == true) { // Verify if the first number was found too
+				found6 = true;
+				result = "YOU WON €6000,00";
+			}	
+			if ((x == third && found2 == true) || (x == third && found == true)) { // Verify if the second number
+				found7 = true;
+				result = "YOU WON €6000,00";
+			}
+			if ((x == fourth && found3 == true) || (x == fourth && found2 == true) || (x == fourth && found == true)) { // Verify if the second	number																		// number
+				found8 = true;
+				result = "YOU WON €6000,00";
+			}
+			if ((x == fifth && found4 == true) || (x == fifth && found3 == true) || (x == fifth && found2 == true) || (x == fifth && found == true)) { // Verify if the second
+	
+				found9 = true;
+				result = "YOU WON €6000,00";
+			}			
+
+			// €6000,00 VALIDATION xxxxxxxxxxxxxxxxxx
+
+			// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+			// €25.000,00 VALIDATION
+			
+			if (x == third && found2 == true && found == true) { // Verify if the third number
+				found10 = true;
+				result = "YOU WON €25.000,00";
+			}
+			
+			if ((x == fourth && found3 == true && found2 == true) || (x == fourth  && found2 == true && found == true) || (x == fourth && found3 == true && found == true)) { // Verify if the third number
+				found11 = true;
+				result = "YOU WON €25.000,00";
+			}
+			
+			if ((x == fifth && found4 == true && found3 == true) || (x == fifth && found4 == true && found2 == true) || (x == fifth && found4 == true && found == true)|| (x == fifth && found3 == true && found2 == true) || (x == fifth && found3 == true && found == true) || (x == fifth && found2 == true && found == true)) { // Verify if the third number
+				found12 = true;
+				result = "YOU WON €25.000,00";
+			}
+			// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+			
+			
+			// €100.000,00 validation xxxxxxxxxxxxxxxxxxxxxxxxxx
+			
+			if (x == fourth && found3 == true && found2 == true && found == true) { // Verify if the fourth number
+				found13 = true;
+				result = "YOU WON €100.000,00";
+			}
+			
+			if ((x == fifth && found4 == true && found3 == true && found2 == true) || 
+				(x == fifth && found4 == true && found2 == true && found == true) || 
+				(x == fifth && found3 == true && found2 == true && found == true)) { // Verify if the fourth
+				found14 = true;
+				result = "YOU WON €100.000,00";
+			}
+			
+			// €800.000,00 validation xxxxxxxxxxxxxxxxxxxxxxxxxx
+			
+			if ((x == fifth && found4 == true && found3 == true && found2 == true && found == true)) { // Verify if the last number
+				found15 = true;
+				result = "YOU WON €800.000,00";
+			}
+			
+
+			int idx = (number.length - 1);
+			if(c == idx) {
+				System.out.println(result); // print the biggest prize
+			}
+			
+		}
+			// task 5
+			  System.out.println("Insert your guess for the sum"); 
+			  int guesswinnersum =  in.nextInt();
+			  int guessprize=0;
+			  boolean guesswinner = false;
+			  if (guesswinnersum == sum) {
+					guesswinner = true;
+					guessprize = 300000;
+				System.out.println("You won €300.000,00 more");
+			}
+			
+			
+			//task 6 
+			System.out.println(" Your total gains are : " + result + "+" + " €"+ guessprize + ",00");
+			
+	
+		}
+
+	}
