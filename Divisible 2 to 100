@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class Divisible2and100 {
+
+	static String valid(Integer number) {
+		String result = "";
+		
+		for (int i = 2; i < 101; i++) {
+			if (number % i == 0) {
+				result = number + " is divisible by " + i;	
+			}	
+			else { 
+				result = number + " isn't divisible by " + i;	
+				}
+			System.out.println(result);
+		}
+		
+		return result;
+	}
+	
+	public static void main(String args[]) {
+
+		Scanner in = new Scanner(System.in);
+		System.out.println("insert first number: "); 
+		int number = in.nextInt();
+		valid(number);
+	}
+}
+
+
+
