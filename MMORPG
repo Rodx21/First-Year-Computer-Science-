@@ -1,0 +1,47 @@
+import java.util.*;
+
+public class MMORPG {
+
+	public static void main (String args[] ) {
+    	
+		Scanner in = new Scanner(System.in);
+		System.out.print("insert rarity: ");
+		Random rnd = new Random();
+		int rndnumber = 1 + (int)(Math.random()*100);	
+		int result = rndnumber * 100;
+		int rarity = in.nextLine().charAt(0);
+		
+		if (rndnumber > 0 && rndnumber < 4 ) {
+			System.out.println("You have a legendary item");
+		} 
+		if (rndnumber == 4 || (rndnumber > 4 && rndnumber < 16 )) {
+			System.out.println("You have a rare item");
+		} 
+		if (rndnumber == 16 || (rndnumber > 16 && rndnumber < 41 )) {
+			System.out.println("You have a magical item");
+		} 
+		if (rndnumber == 41 || (rndnumber > 41 && rndnumber < 101 )) {
+			System.out.println("You have a normal item");
+		}
+
+		
+		if ((rndnumber > 0 && rndnumber < 4 ) && (rarity == 'l' || rarity == 'L'))  {
+			System.out.println("You win"); 
+		}
+		
+		if ((rndnumber == 4 || (rndnumber > 4 && rndnumber < 16 )) && (rarity == 'r' || rarity == 'R')) {
+			System.out.println("You win ");
+		} 
+		
+		if ((rndnumber == 16 || (rndnumber > 16 && rndnumber < 41 )) && (rarity == 'M'|| rarity =='m')) {
+			System.out.println("You win ");
+		} 
+				
+		if ((rndnumber == 41 || (rndnumber > 41 && rndnumber < 101 )) && (rarity== 'n' || rarity=='N')) {
+			System.out.println("You win "); 	
+		} else {
+			System.out.println("You loose ");
+		}		
+	}
+		
+}
